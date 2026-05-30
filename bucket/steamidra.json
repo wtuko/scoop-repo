@@ -1,10 +1,10 @@
 {
-    "version": "6.2.9",
+    "version": "6.3.0",
     "description": "Full-featured Steam manifest tool with GUI, DLC unlockers, multiplayer fixes, GreenLuma AppList management, library scanner, backups, and more",
     "homepage": "https://github.com/Midrags/SFF",
     "license": "GPL-3.0",
-    "url": "https://github.com/Midrags/SFF/releases/download/v6.2.9/SteaMidra-6.2.9-Setup.exe#/dl.7z",
-    "hash": "64edeb9a371fe6fe81dd6723b858762e78580b58217ecc971367e60120745647",
+    "url": "https://github.com/Midrags/SFF/releases/download/v6.3.0/SteaMidra-6.3.0-Setup.exe#/dl.7z",
+    "hash": "57c91e971d34744c0dec9236bf37b557165504f9a63871839af7cc3254babf12",
     "pre_install": [
         "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\SteaMidra.ico\" -Force -Recurse",
         "",
