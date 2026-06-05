@@ -1,10 +1,10 @@
 {
-    "version": "26-06-01",
+    "version": "26-06-05",
     "description": "A continuation of SpiceTools project with hundreds of bug fixes and new features",
     "homepage": "https://spice2x.github.io/",
     "license": "GPL-3.0",
-    "url": "https://github.com/spice2x/spice2x.github.io/releases/download/26-06-01/spice2x-26-06-01.zip",
-    "hash": "7e75c3472d2500fd972026d320fda6d1fba1001925ef82b2dd530cc772533bcd",
+    "url": "https://github.com/spice2x/spice2x.github.io/releases/download/26-06-05/spice2x-26-06-05.zip",
+    "hash": "d41804c31a5a78afbff2039a5fb82c90cb1193fcc6942770c6afcb1fa5bd134f",
     "pre_install": "Remove-Item \"$dir\\*\" -Exclude *.exe -Force -Recurse",
     "checkver": {
         "url": "https://api.github.com/repos/spice2x/spice2x.github.io/releases",
