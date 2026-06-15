@@ -1,10 +1,10 @@
 {
-    "version": "3.7.0-162",
+    "version": "3.7.0-166",
     "description": "An ASI plugin for Grand Theft Auto V, which allows running scripts written in any .NET language on the .NET Framework runtime in-game",
     "homepage": "https://scripthookvdotnet.github.io/",
     "license": "https://github.com/scripthookvdotnet/scripthookvdotnet/blob/main/LICENSE.txt",
-    "url": "https://github.com/scripthookvdotnet/scripthookvdotnet-nightly/releases/download/v3.7.0-nightly.162/ScriptHookVDotNet-v3.7.0-nightly.162.zip",
-    "hash": "85edecb362162e8bac47bf3094c91d2d6e33b0faeb202766493b3e1e0daf4ddf",
+    "url": "https://github.com/scripthookvdotnet/scripthookvdotnet-nightly/releases/download/v3.7.0-nightly.166/ScriptHookVDotNet-v3.7.0-nightly.166.zip",
+    "hash": "ae263c534ec17d95399d8e1c14e9766727a2069bd68c7d6300c3db0cc5eaae2b",
     "pre_install": [
         "if (!(Test-Path \"$env:GTAV_PATH\\PlayGTAV.exe\")) {error 'Please create the environment variable GTAV_PATH pointing to your GTAV directory before installing this package.'; break}",
         "Write-Host 'Installing to ' -NoNewline; Write-Host $env:GTAV_PATH -NoNewline; Write-Host '...'",
