@@ -1,6 +1,6 @@
 {
     "version": "6.3.7",
-    "description": "Full-featured Steam manifest tool with GUI, DLC unlockers, multiplayer fixes, GreenLuma AppList management, library scanner, backups, and more",
+    "description": "Advanced Steam game setup and management tool featuring manifest handling, Lua integrations, LumaCore deployment, multiplayer fixes, DLC unlocking, backups, game fixes, and an easy-to-use GUI",
     "homepage": "https://github.com/Midrags/SFF",
     "license": "GPL-3.0",
     "url": "https://github.com/Midrags/SFF/releases/download/v6.3.7/SteaMidra-6.3.7-Setup.exe#/dl.7z",

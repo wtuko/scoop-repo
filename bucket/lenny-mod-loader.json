@@ -16,7 +16,7 @@
         "Write-Host 'Installing to ' -NoNewline; Write-Host $env:GTAV_PATH -NoNewline; Write-Host '...'",
         "Remove-Item \"$dir\\ModLoader\\_PLACE ALL THIS IN THE GAME ROOT\"",
         "Remove-Item \"$dir\\ModLoader\\lml\\_MODS GO HERE\"",
-        "Move-Item \"$dir\\ModLoader\\*\" \"$env:GTAV_PATH\" -Force -ErrorAction SilentlyContinue",
+        "Copy-Item \"$dir\\ModLoader\\*\" \"$env:GTAV_PATH\" -Force -Recurse",
         "Remove-Item -Path \"$dir\\ModLoader\" -Recurse"
     ],
     "shortcuts": [
