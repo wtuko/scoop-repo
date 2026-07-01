@@ -6,11 +6,11 @@
     "url": "https://github.com/Midrags/SFF/releases/download/v6.3.7/SteaMidra-6.3.7-Setup.exe#/dl.7z",
     "hash": "cbaff82bca65ed380f1bcf6d430375fa930e970e6f6c382d899cac1fc7640ef1",
     "pre_install": [
-        "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\SteaMidra.ico\" -Force -Recurse",
+        "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\SteaMidra.ico\", \"$dir\\Uninstall.exe\" -Force -Recurse",
         "",
         "if (!(Test-Path \"$persist_dir\\settings.bin\")) {",
         "    Write-Host 'File settings.bin does not exists. Creating.' -f Yellow",
-        "    Start-Process -FilePath \"$dir\\SteaMidra_GUI.exe\"",
+        "    Start-Process -FilePath \"$dir\\SteaMidra_GUI.exe\" -WindowStyle Hidden",
         "    while (!(Test-Path \"$dir\\settings.bin\")) {",
         "        Start-Sleep -Milliseconds 500",
         "    }",
@@ -25,10 +25,14 @@
     ],
     "persist": [
         "manifests",
+        "save_backups",
         "saved_lua",
         "settings.bin"
     ],
-    "pre_uninstall": "Stop-Process -Name 'SteaMidra_GUI' -Force -ErrorAction SilentlyContinue",
+    "pre_uninstall": [
+        "Stop-Process -Name 'SteaMidra_GUI' -Force -ErrorAction SilentlyContinue",
+        "Copy-Item \"$dir\\settings.bin\" \"$persist_dir\" -Force"
+    ],
     "checkver": "github",
     "autoupdate": {
         "url": "https://github.com/Midrags/SFF/releases/download/v$version/SteaMidra-$version-Setup.exe#/dl.7z"
