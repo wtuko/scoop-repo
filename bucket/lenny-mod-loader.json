@@ -8,16 +8,14 @@
     "pre_install": [
         "if (!(Test-Path \"$env:GTAV_PATH\\PlayGTAV.exe\")) {error 'Please create the environment variable GTAV_PATH pointing to your GTAV directory before installing this package.'; break}",
         "",
-        "Remove-Item \"$dir\\license.txt\"",
-        "Remove-Item \"$dir\\readme.txt\"",
-        "Move-Item \"$dir\\ModManager\\*\" \"$dir\"",
-        "Remove-Item -Path \"$dir\\ModManager\"",
+        "Remove-Item \"$dir\\license.txt\", \"$dir\\readme.txt\" -Force",
+        "Move-Item \"$dir\\ModManager\\*\" \"$dir\" -Force",
+        "Remove-Item \"$dir\\ModManager\" -Force -Recurse",
         "",
         "Write-Host 'Installing to ' -NoNewline; Write-Host $env:GTAV_PATH -NoNewline; Write-Host '...'",
-        "Remove-Item \"$dir\\ModLoader\\_PLACE ALL THIS IN THE GAME ROOT\"",
-        "Remove-Item \"$dir\\ModLoader\\lml\\_MODS GO HERE\"",
+        "Remove-Item \"$dir\\ModLoader\\_PLACE ALL THIS IN THE GAME ROOT\", \"$dir\\ModLoader\\lml\\_MODS GO HERE\" -Force",
         "Copy-Item \"$dir\\ModLoader\\*\" \"$env:GTAV_PATH\" -Force -Recurse",
-        "Remove-Item -Path \"$dir\\ModLoader\" -Recurse"
+        "Remove-Item \"$dir\\ModLoader\" -Force -Recurse"
     ],
     "shortcuts": [
         [

@@ -10,7 +10,7 @@
         "Write-Host 'Installing to ' -NoNewline; Write-Host $env:GTAV_PATH -NoNewline; Write-Host '...'",
         "Copy-Item \"$dir\\menyooStuff\" \"$env:GTAV_PATH\" -Force -Recurse",
         "Copy-Item \"$dir\\Menyoo.asi\" \"$env:GTAV_PATH\" -Force",
-        "Remove-Item \"$dir\\*\""
+        "Remove-Item \"$dir\\*\" -Force -Recurse"
     ],
     "checkver": {
         "github": "https://github.com/itsjustcurtis/MenyooSP"

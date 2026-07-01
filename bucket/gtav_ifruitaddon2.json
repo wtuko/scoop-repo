@@ -10,7 +10,7 @@
         "Write-Host 'Installing to ' -NoNewline; Write-Host $env:GTAV_PATH -NoNewline; Write-Host '...'",
         "New-Item \"$env:GTAV_PATH\\scripts\" -ItemType Directory -Force | Out-Null",
         "Copy-Item \"$dir\\iFruitAddon2.dll\" \"$env:GTAV_PATH\\scripts\" -Force",
-        "Remove-Item \"$dir\\*\""
+        "Remove-Item \"$dir\\*\" -Force -Recurse"
     ],
     "checkver": {
         "github": "https://github.com/Bob74/iFruitAddon2"
