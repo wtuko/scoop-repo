@@ -13,7 +13,7 @@ if ([string]::IsNullOrWhiteSpace($folderName)) {
 $fullPath = Join-Path -Path $targetDirectory -ChildPath $folderName
 
 try {
-    New-Item -Path $fullPath -ItemType Directory -ErrorAction Stop | Out-Null    
+    New-Item -Path $fullPath -ItemType Directory -ErrorAction Stop | Out-Null
     Write-Host "`nProfile '$folderName' has been created." -ForegroundColor Green
 }
 catch {

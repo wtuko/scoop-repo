@@ -15,7 +15,7 @@ $fullPath = Join-Path -Path $targetDirectory -ChildPath $folderName
 if (Test-Path -Path $fullPath -PathType Container) {
     Write-Host "`nNote: This script will close Reloaded-II to prevent any potential data loss." -ForegroundColor Yellow
     $confirm = Read-Host -Prompt "Are you sure you want to delete '$folderName'? (Y)"
-    
+
     if ($confirm -eq 'YES' -or $confirm -eq 'Y' -or $confirm -eq '') {
         Write-Host "`nAttempting to close the app..."
         Stop-Process -Name 'reloaded-ii' -Force -Verbose -ErrorAction SilentlyContinue
