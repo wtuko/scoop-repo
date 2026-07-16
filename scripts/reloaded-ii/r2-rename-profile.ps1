@@ -32,6 +32,7 @@ $confirm = Read-Host -Prompt "Are you sure you want to rename '$currentName' to 
 if ($confirm -eq 'YES' -or $confirm -eq 'Y' -or $confirm -eq '') {
     Write-Host "`nAttempting to close the app..."
     Stop-Process -Name 'reloaded-ii' -Force -Verbose -ErrorAction SilentlyContinue
+    Start-Sleep 1
 
     $profileApps = "$newPath\Apps"
     $profileUser = "$newPath\User"

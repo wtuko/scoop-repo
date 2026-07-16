@@ -12,6 +12,7 @@ if ((Test-Path -Path $appdataRoaming -PathType Container) -or (Test-Path -Path $
     if ($confirm -eq 'YES' -or $confirm -eq 'Y' -or $confirm -eq '') {
         Write-Host "`nAttempting to close the app..."
         Stop-Process -Name 'reloaded-ii' -Force -Verbose -ErrorAction SilentlyContinue
+        Start-Sleep 1
 
         Remove-Item -Path $appdataRoaming, $appdataLocal -Force -Recurse -ErrorAction SilentlyContinue
         Write-Host "`nThe Reloaded-II directories have been deleted." -ForegroundColor Green
