@@ -6,7 +6,11 @@
         "identifier": "GPL-3.0-or-later",
         "url": "https://github.com/Reloaded-Project/Reloaded-II/blob/master/LICENSE.md"
     },
-    "notes": "Custom PowerShell scripts are included in this manifest for profile management, so be sure to create & enable your new profile for user config persistence before using the app. If you get a missing dependencies error when installing mods, try connecting to the Cloudflare WARP VPN and reopen the app.",
+    "notes": [
+        "Custom PowerShell scripts are included in this manifest for profile management, so be sure to create & enable your new profile for user config persistence before using the app.",
+        "",
+        "If you get a missing dependencies error when installing mods, try connecting to the Cloudflare WARP VPN and reopen the app."
+    ],
     "suggest": {
         ".NET Desktop Runtime 9.0": "versions/windowsdesktop-runtime-9.0"
     },
