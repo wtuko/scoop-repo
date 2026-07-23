@@ -6,11 +6,7 @@
         "identifier": "GPL-3.0-or-later",
         "url": "https://github.com/Reloaded-Project/Reloaded-II/blob/master/LICENSE.md"
     },
-    "notes": [
-        "Custom PowerShell scripts are included in this manifest for profile management, so be sure to create & enable your new profile for user config persistence before using the app.",
-        "",
-        "If you get a missing dependencies error when installing mods, try connecting to the Cloudflare WARP VPN and reopen the app."
-    ],
+    "notes": "Custom PowerShell scripts are included in this manifest for profile management, so be sure to create a new profile and set it as active for user config persistence before using the app.",
     "suggest": {
         ".NET Desktop Runtime 9.0": "versions/windowsdesktop-runtime-9.0"
     },
@@ -29,9 +25,11 @@
             "bin": [
                 "r2-add-profile.ps1",
                 "r2-delete-profile.ps1",
-                "r2-enable-profile.ps1",
+                "r2-disable-testmode.ps1",
+                "r2-enable-testmode.ps1",
                 "r2-list.ps1",
                 "r2-rename-profile.ps1",
+                "r2-set-profile.ps1",
                 [
                     "Reloaded-II32.exe",
                     "reloaded-ii"
@@ -48,9 +46,11 @@
             "bin": [
                 "r2-add-profile.ps1",
                 "r2-delete-profile.ps1",
-                "r2-enable-profile.ps1",
+                "r2-disable-testmode.ps1",
+                "r2-enable-testmode.ps1",
                 "r2-list.ps1",
                 "r2-rename-profile.ps1",
+                "r2-set-profile.ps1",
                 [
                     "Reloaded-II.exe",
                     "reloaded-ii"

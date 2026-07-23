@@ -1,6 +1,7 @@
 Write-Host "=== Reloaded-II Directory ===" -ForegroundColor Cyan
-Get-ChildItem -Path $PSScriptRoot -Filter Apps | ForEach-Object {Write-Host "$($_.Name) ($($_.LinkTarget))"}
-Get-ChildItem -Path $PSScriptRoot -Filter User | ForEach-Object {Write-Host "$($_.Name) ($($_.LinkTarget))"}
+Get-ChildItem -Path $PSScriptRoot -Filter Apps | ForEach-Object {Write-Host "Apps -> $($_.LinkTarget)"}
+Get-ChildItem -Path $PSScriptRoot -Filter User | ForEach-Object {Write-Host "User -> $($_.LinkTarget)"}
+Write-Host "Enabled Test Mode: $(Test-Path $PSScriptRoot\Mods.orig)"
 
 Write-Host "`n=== Profiles List ===" -ForegroundColor Cyan
 Get-ChildItem -Path $PSScriptRoot\_Profiles | Select-Object -ExpandProperty Name
