@@ -1,5 +1,10 @@
 $targetDirectory = "$PSScriptRoot\_Profiles"
 
+if (Test-Path "$PSScriptRoot\Mods.orig") {
+    Write-Host "Test Mode is currently enabled. Please disable it first before setting a profile as active." -ForegroundColor Red
+    exit
+}
+
 Write-Host "Available profiles:" -ForegroundColor Cyan
 Get-ChildItem -Path $targetDirectory -Directory | Select-Object -ExpandProperty Name
 
