@@ -53,7 +53,7 @@
         "autoload",
         "savegames"
     ],
-    "pre_uninstall": "Copy-Item \"$dir\\nugget-doom.cfg\" \"$persist_dir\" -Force -ErrorAction SilentlyContinue",
+    "pre_uninstall": "Copy-Item \"$dir\\nugget-doom.cfg\" \"$persist_dir\" -Force",
     "checkver": {
         "github": "https://github.com/MrAlaux/Nugget-Doom",
         "re": "nugget-doom-([\\d.]+)"
