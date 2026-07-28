@@ -14,8 +14,15 @@
         }
     },
     "pre_install": [
-        "New-Item \"$persist_dir\" -ItemType Directory -Force | Out-Null",
-        "Copy-Item \"$persist_dir\\options.json\" \"$dir\" -ErrorAction SilentlyContinue"
+        "if (!(Test-Path \"$persist_dir\\options.json\")) {",
+        "    Write-Host 'File options.json does not exists. Please configure the settings in the app first, then click Done to close the app and wait.' -f Yellow",
+        "    Start-Process -FilePath \"$dir\\DoomRunner.exe\" -WindowStyle Hidden",
+        "    while (!(Test-Path \"$dir\\options.json\")) {",
+        "        Start-Sleep -Milliseconds 500",
+        "    }",
+        "    Start-Sleep 1",
+        "    Stop-Process -Name 'DoomRunner' -Force",
+        "}"
     ],
     "shortcuts": [
         [
@@ -23,7 +30,8 @@
             "Doom Runner"
         ]
     ],
-    "pre_uninstall": "Copy-Item \"$dir\\options.json\" \"$persist_dir\" -Force -ErrorAction SilentlyContinue",
+    "persist": "options.json",
+    "pre_uninstall": "Copy-Item \"$dir\\options.json\" \"$persist_dir\" -Force",
     "checkver": "github",
     "autoupdate": {
         "architecture": {
