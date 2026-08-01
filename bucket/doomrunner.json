@@ -31,7 +31,7 @@
         ]
     ],
     "persist": "options.json",
-    "pre_uninstall": "Copy-Item \"$dir\\options.json\" \"$persist_dir\" -Force",
+    "pre_uninstall": "Copy-Item \"$dir\\options.json\" \"$persist_dir\" -Force -ErrorAction SilentlyContinue",
     "checkver": "github",
     "autoupdate": {
         "architecture": {
