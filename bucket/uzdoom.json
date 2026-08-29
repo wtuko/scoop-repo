@@ -43,7 +43,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/UZDoom/UZDoom/releases/download/$version/Windows-UZDoom-$version.zip"
+                "url": "https://github.com/UZDoom/UZDoom/releases/download/$version/Windows-UZDoom-Release-x86_64.zip"
             }
         }
     }
