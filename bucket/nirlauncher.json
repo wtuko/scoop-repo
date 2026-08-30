@@ -1,0 +1,23 @@
+{
+    "version": "1.30.25",
+    "description": "More than 200 portable freeware utilities for Windows, all of them developed for NirSoft Web site during the last few years",
+    "homepage": "https://launcher.nirsoft.net/",
+    "license": "Freeware",
+    "url": "https://download.nirsoft.net/nirsoft_package_enc_1.30.25.zip#/nirlauncher.enc",
+    "hash": "842c6296498fb60837d5282ae2bd204a4841e17036f26f6d306918cec8df829a",
+    "pre_install": "Expand-7zipArchive \"$dir\\$fname\" -Switches \"-pnirsoft9876$\"",
+    "shortcuts": [
+        [
+            "NirLauncher.exe",
+            "NirLauncher"
+        ]
+    ],
+    "persist": "NirLauncher.cfg",
+    "checkver": {
+        "url": "https://launcher.nirsoft.net/downloads/index.html",
+        "regex": "nirsoft_package_enc_([\\d.]+)\\.zip"
+    },
+    "autoupdate": {
+        "url": "https://download.nirsoft.net/nirsoft_package_enc_$version.zip#/nirlauncher.enc"
+    }
+}

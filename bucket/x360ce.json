@@ -1,0 +1,25 @@
+{
+    "version": "4.19.17.0",
+    "description": "Xbox 360 Controller Emulator allows your controller (gamepad, joystick, steering wheel, pedals, etc.) to function on your PC as an Xbox 360 controller.",
+    "homepage": "https://www.x360ce.com/",
+    "license": {
+        "identifier": "LGPL-3.0",
+        "url": "https://github.com/x360ce/x360ce/blob/master/App.v4/Documents/License.txt"
+    },
+    "url": "https://github.com/x360ce/x360ce/releases/download/4.19.0.0/x360ce.zip",
+    "hash": "0b22e51e92cdf2b6c79ea5058c5c9e7fd40aaaae39322475a20978186872569d",
+    "shortcuts": [
+        [
+            "x360ce.exe",
+            "x360ce"
+        ]
+    ],
+    "checkver": {
+        "url": "https://api.github.com/repos/x360ce/x360ce/releases/latest",
+        "jsonpath": "$.name",
+        "regex": "X360CE ([\\d.]+)"
+    },
+    "autoupdate": {
+        "url": "https://github.com/x360ce/x360ce/releases/download/$majorVersion.$minorVersion.0.0/x360ce.zip"
+    }
+}
