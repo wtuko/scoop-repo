@@ -1,5 +1,5 @@
 {
-    "version": "5.1.0-pre.168+9cb087a",
+    "version": "5.1.0-pre.174+955607c",
     "description": "Feature-centric port for all Doom engine games, based on GZDoom, adding an advanced renderer and powerful scripting capabilities (preview build)",
     "homepage": "https://zdoom.org/",
     "license": "GPL-3.0-or-later",
@@ -11,7 +11,7 @@
     "architecture": {
         "64bit": {
             "url": "https://github.com/UZDoom/UZDoom/releases/download/x-preview/Windows-UZDoom-Preview-x86_64.zip",
-            "hash": "9d911f3e348b6cc0d347411dc02e9351db1e03859deaca366ca4d730a6e1c76a"
+            "hash": "8ab927eb92a6cd131966512234df2321709e8b7b9612aff77dbdcfa584e165a6"
         }
     },
     "pre_install": [
