@@ -43,7 +43,7 @@
         "Screenshots"
     ],
     "checkver": {
-        "url": "https://github.com/UZDoom/UZDoom/releases/tag/x-preview",
+        "github": "https://api.github.com/repos/UZDoom/UZDoom/releases/tags/x-preview",
         "regex": "(?<version>\\d+\\.\\d+\\.\\d+-pre\\.(?<build>\\d+)\\+(?<commit>[a-f0-9]+))"
     },
     "autoupdate": {
