@@ -21,6 +21,6 @@
         "jsonpath": "$.tag_name"
     },
     "autoupdate": {
-        "url": "https://github.com/YARC-Official/YARG-BleedingEdge/releases/download/$version/YARG_$version-Windows-x64.zip"
+        "url": "https://github.com/YARC-Official/YARG-BleedingEdge/releases/download/b$version/YARG_b$version-Windows-x64.zip"
     }
 }
