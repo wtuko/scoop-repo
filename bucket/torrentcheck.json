@@ -1,0 +1,20 @@
+{
+    "version": "0.9e",
+    "description": "TorrentCheck checks if the files on a computer match a torrent.",
+    "homepage": "https://pleasuredome.miraheze.org/wiki/TorrentCheck",
+    "license": "Freeware",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/wtuko/scoop-repo/releases/download/bins/torrentcheck0.9e.zip",
+            "hash": "2f4f25e87cc356eedbd806cc77dce8a5d201545b3ff4ae7555b943bf4614f30d"
+        }
+    },
+    "shortcuts": [
+        [
+            "TorrentCheck.exe",
+            "TorrentCheck"
+        ]
+    ],
+    "post_uninstall": "if ($purge) { Remove-Item \"$env:APPDATA\\TorrentCheck\" -Force -Recurse -ErrorAction SilentlyContinue }",
+    "notes": "TorrentCheck is NOT portable. Settings are stored in '%APPDATA%\\TorrentCheck', and will be purged during uninstallation."
+}
