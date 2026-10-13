@@ -1,0 +1,22 @@
+{
+    "version": "October2025",
+    "description": "Local Group Policy Editor plus more, for all Windows editions",
+    "homepage": "https://github.com/Fleex255/PolicyPlus",
+    "license": "CC-BY-4.0",
+    "url": "https://github.com/Fleex255/PolicyPlus/releases/download/October2025/PolicyPlus.exe",
+    "hash": "28c86dc782966929b09e951f0580826027c0b80e9ba38868e1fc6811dfb8bade",
+    "shortcuts": [
+        [
+            "PolicyPlus.exe",
+            "Policy Plus"
+        ]
+    ],
+    "checkver": {
+        "github": "https://api.github.com/repos/Fleex255/PolicyPlus/releases",
+        "jsonpath": "$[0].tag_name",
+        "regex": "([A-Za-z0-9]+)"
+    },
+    "autoupdate": {
+        "url": "https://github.com/Fleex255/PolicyPlus/releases/download/$version/PolicyPlus.exe"
+    }
+}

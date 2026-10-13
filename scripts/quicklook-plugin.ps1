@@ -6,7 +6,7 @@ $plugin_name = (Get-Item "$dir\..").Name
 Stop-Process -Name 'QuickLook' -Force -ErrorAction SilentlyContinue; Start-Sleep 1
 
 if ($cmd -eq 'pre_install') {
-    New-Item -Path "$persist_dir\$plugin_name" -Target "$dir" -ItemType SymbolicLink | Out-Null
+    New-Item -Path "$persist_dir\$plugin_name" -Target "$dir" -ItemType SymbolicLink -Force | Out-Null
 } elseif ($cmd -eq 'pre_uninstall') {
-    Remove-Item -Path "$persist_dir\$plugin_name" -Force
+    Remove-Item -Path "$persist_dir\$plugin_name" -Force -ErrorAction SilentlyContinue
 }
