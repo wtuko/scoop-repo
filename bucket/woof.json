@@ -27,12 +27,8 @@
         }
     },
     "pre_install": [
-        "if (!(Test-Path \"$persist_dir\\woof.cfg\")) {",
-        "   New-Item -ItemType File \"$dir\\woof.cfg\" | Out-Null",
-        "}",
-        "if (!(Test-Path \"$scoopdir\\persist\\_doom\")) {",
-        "   New-item \"$scoopdir\\persist\\_doom\" -ItemType Directory | Out-Null",
-        "}"
+        "Copy-Item \"$persist_dir\\woof.cfg\" \"$dir\" -ErrorAction SilentlyContinue",
+        "ensure \"$persist_dir\\..\\_doom\" | Out-Null"
     ],
     "env_set": {
         "DOOMWADDIR": "$persist_dir\\..\\_doom"
@@ -49,7 +45,6 @@
         ]
     ],
     "persist": [
-        "woof.cfg",
         "autoload",
         "savegames"
     ],
