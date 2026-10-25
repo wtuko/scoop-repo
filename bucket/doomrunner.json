@@ -20,7 +20,7 @@
             "Doom Runner"
         ]
     ],
-    "pre_uninstall": "Copy-Item \"$dir\\options.json\" \"$persist_dir\" -Force -ErrorAction SilentlyContinue",
+    "post_uninstall": "Copy-Item \"$dir\\options.json\" \"$persist_dir\" -Force -ErrorAction SilentlyContinue",
     "checkver": "github",
     "autoupdate": {
         "architecture": {
