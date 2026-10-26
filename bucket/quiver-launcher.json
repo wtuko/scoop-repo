@@ -20,7 +20,7 @@
     "checkver": {
         "github": "https://api.github.com/repos/tgeorgiadis/quiver-launcher/releases",
         "jsonpath": "$[0].tag_name",
-        "regex": "v(.*)"
+        "regex": "v([\\w.-]+)"
     },
     "autoupdate": {
         "url": "https://github.com/tgeorgiadis/quiver-launcher/releases/download/v$version/QuiverLauncher-win-Portable.zip"
