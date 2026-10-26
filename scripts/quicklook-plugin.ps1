@@ -3,7 +3,9 @@ param([Parameter(Mandatory)][String] $dir, [Parameter(Mandatory)][String] $persi
 $persist_dir = (Resolve-Path "$persist_dir\..\quicklook\UserData\QuickLook.Plugin").Path
 $plugin_name = (Get-Item "$dir\..").Name
 
-Stop-Process -Name 'QuickLook' -Force -ErrorAction SilentlyContinue; Start-Sleep 1
+if (Get-Process -Name 'QuickLook' -ErrorAction SilentlyContinue) {
+    Stop-Process -Name 'QuickLook' -Force; Start-Sleep 1
+}
 
 if ($cmd -eq 'pre_install') {
     Remove-Item -Path "$persist_dir\$plugin_name" -Force -Recurse -ErrorAction SilentlyContinue
